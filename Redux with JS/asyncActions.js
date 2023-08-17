@@ -12,13 +12,13 @@ const initialState = {
   error: '',
 }
 
-// constants
+// action types
 
 const FETCH_USERS_REQUESTED = 'FETCH_USERS_REQUESTED'
 const FETCH_USERS_SUCCEEDED = 'FETCH_USERS_SUCCEEDED'
 const FETCH_USERS_FAILED = 'FETCH_USERS_FAILED'
 
-// action functions
+// action creators
 
 const fetchUsersRequest = () => {
   return {
@@ -40,7 +40,7 @@ const fetchUsersFailure = (error) => {
   }
 }
 
-// fetch
+// fetch // also action creator
 
 const fetchUsers = () => {
   return function (dispatch) {
